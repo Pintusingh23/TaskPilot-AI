@@ -1,0 +1,67 @@
+
+# Environment secrets
+.env
+.env.*
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Google OAuth credentials
+credentials.json
+token.json
+calendar_token.json
+
+# IDE files
+.vscode/
+
+# Operating system
+.DS_Store
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Google credentials and tokens
+credentials.json
+token.json
+calendar_token.json
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Google credentials and tokens
+credentials.json
+token.json
+calendar_token.json
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
