@@ -78,3 +78,5 @@ dist/
 frontend/dist/
 .pytest_cache/
 
+.vercel
+.env*

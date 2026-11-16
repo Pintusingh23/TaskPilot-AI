@@ -26,14 +26,14 @@ const navItems = [
 
 export default function Sidebar() {
   const { user } = useAuth();
-  const { darkMode, toggleTheme } = useTheme();
+  const { darkMode, toggleTheme, currentPalette } = useTheme();
   const navigate = useNavigate();
 
   return (
     <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col h-screen select-none shrink-0 transition-colors">
       {/* Brand Logo */}
       <div className="h-16 px-6 flex items-center gap-3 border-b border-slate-200 dark:border-slate-800">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+        <div className={`w-10 h-10 rounded-xl bg-gradient-to-tr ${currentPalette.navGradient} flex items-center justify-center text-white shadow-md shadow-red-500/10`}>
           <Sparkles className="w-5 h-5" />
         </div>
         <div>
@@ -56,7 +56,7 @@ export default function Sidebar() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-sm transition-all ${
                   isActive
-                    ? 'bg-brand-500 text-white shadow-sm shadow-brand-500/30'
+                    ? currentPalette.activeNav
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-slate-100'
                 }`
               }
@@ -88,7 +88,7 @@ export default function Sidebar() {
           className="flex items-center justify-between pt-2 px-2 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors cursor-pointer"
         >
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="w-8 h-8 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm shadow-brand-500/20">
+            <div className={`w-8 h-8 rounded-full ${currentPalette.primaryBg} text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm`}>
               {user?.name ? user.name[0].toUpperCase() : 'P'}
             </div>
             <div className="truncate">
