@@ -65,3 +65,16 @@ node_modules/
 
 # macOS
 .DS_Store
+
+# Local Database
+*.db
+*.sqlite
+*.sqlite3
+taskpilot.db
+
+
+# Frontend build output
+dist/
+frontend/dist/
+.pytest_cache/
+
